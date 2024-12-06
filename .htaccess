@@ -1,0 +1,16 @@
+# Habilitar la reescritura de URLs
+RewriteEngine On
+
+# Establecer la carpeta base (modificar si la aplicación no está en la raíz del servidor)
+RewriteBase /password_manager/
+
+# Ignorar solicitudes directas a archivos y directorios existentes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todo lo demás a index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Opcionales: Configuración adicional
+# Establecer codificación UTF-8
+AddDefaultCharset UTF-8

@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+#contenedor{
+    min-width: 100%;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+#login_contenedor{
+    min-width: 35%;
+}
+
+#password_list_card{
+    min-width: 80%;
+}
+
+.toHide{
+    display: none;
+}
